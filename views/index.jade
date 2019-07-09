@@ -1,0 +1,67 @@
+doctype html
+html(lang="en")
+  head
+    title MagicFileStore
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto")
+    link(rel="stylesheet" href="//fonts.googleapis.com/css?family=Gentium+file+Basic:700")
+    link(rel="stylesheet" href="/style.css")
+  body
+
+    header
+      nav
+        a(href="/") All Files
+        if user
+          a(href="/userFiles") My Files
+      section#account
+        if user
+          img(src=user.imageUrl)
+          span Logged in as #{user.name}
+          a(href="/logout") Sign out
+
+          fieldset#add-file
+            legend Upload File
+            form(method="post" action="/upload/file" enctype="multipart/form-data")
+              label
+              | File 
+              input(name="inputFile" type="file")
+              input(type="submit" value="Upload file")
+
+          fieldset#download-file
+            legend Download File
+            form(method="post" action="/download?userId=#{user.id}" enctype="multipart/form-data")
+              label
+              | File Unique ID
+              input(name="filename" type="text")
+              input(type="submit" value="Download file")
+
+        else
+          a(href="/login") Sign in
+
+ 
+
+    section#files
+      .h1 Files Collection
+      if files.length
+        - each file in files
+          .file
+            if file.fileurl
+              .cover
+                img(src=file.fileUrl fileName="#{file.fileName} file size #{file.fileSize}")
+            else
+              .info
+                .fileName= 'File Name : '+file.fileName
+                .fileId= 'File Unique ID : '+file.fileId
+                .fileSize= 'File Size : '+file.fileSize
+                .userId= 'File Uploaded User ID : '+file.userId
+            a.delete(href="/files/delete?id=#{file.id}") delete
+      else
+        .nofiles There are no files!
+
+    
+
+
+
+    
+
+

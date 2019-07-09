@@ -1,0 +1,108 @@
+body {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  margin-bottom: 15px;
+}
+
+nav {
+  margin-bottom: 10px;
+}
+
+nav a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#account span, #account img {
+  display: block;
+  margin: 0 auto;
+}
+
+#add-file {
+  padding: 10px;
+  margin: 20px auto;
+  width: 350px;
+}
+
+#add-file label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#add-file input {
+  margin-left: 10px;
+}
+
+#add-file input[type="submit"] {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+#download-file {
+  padding: 10px;
+  margin: 20px auto;
+  width: 350px;
+}
+
+#download-filelabel {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#download-file input {
+  margin-left: 10px;
+}
+
+#download-file input[type="submit"] {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.h1 {
+  font-size: 30px;
+  color: blue;
+}
+.nofiles {
+  font-size: 22px;
+}
+
+.file {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: top;
+  padding: 0;
+}
+
+.file .cover img {
+  display: block;
+  max-width: 150px;
+  max-height: 200px;
+}
+
+.file .info {
+  border: 5px outset gray;
+  padding: 10px;
+  text-align:left;
+  width: 450px;
+  height: 180px;
+  font-family: 'Gentium Book Basic', serif;
+  font-size: 20px;
+  background-color: lightblue;
+}
+
+.file .info .fileName {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.file .info .by {
+  margin: 5px 0;
+}
+
+.book a.delete {
+  display: inline-block;
+  margin-top: 5px;
+}

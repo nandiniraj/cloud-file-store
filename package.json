@@ -1,0 +1,50 @@
+{
+  "name": "cloud-file-storage",
+  "version": "2.0.22",
+  "description": "Cloud file upload and download",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "nyc": {
+    "include": [
+      "*.js"
+    ],
+    "extension": [
+      ".js"
+    ],
+    "report-dir": "test/coverage/js",
+    "reporter": [
+      "lcov",
+      "html"
+    ],
+    "all": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gecgithub01.walmart.com/GWPD/gateway-api"
+  },
+  "author": "Nandini Raj",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "async": "^3.1.0",
+    "await": "^0.2.6",
+    "axios": "^0.19.0",
+    "cookie-session": "^1.1.0",
+    "download": "^7.1.0",
+    "express": "^4.12.3",
+    "fs": "0.0.1-security",
+    "google-cloud": "^0.48.0",
+    "googleapis": "^30.0.0",
+    "http": "0.0.0",
+    "https": "^1.0.0",
+    "jade": "^1.9.2",
+    "mime-types": "^2.1.24",
+    "multer": "^0.1.8",
+    "path": "^0.12.7",
+    "popups": "^1.1.3",
+    "request": "^2.88.0",
+    "url": "^0.11.0",
+    "ytdl-core": "^0.29.2"
+  }
+}
