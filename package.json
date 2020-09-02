@@ -35,7 +35,7 @@
     "express": "^4.12.3",
     "fs": "0.0.1-security",
     "google-cloud": "^0.48.0",
-    "googleapis": "^30.0.0",
+    "googleapis": "^59.0.0",
     "http": "0.0.0",
     "https": "^1.0.0",
     "jade": "^1.9.2",
